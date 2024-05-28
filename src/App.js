@@ -11,6 +11,8 @@ const App = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 8;
 
+ 
+
   useEffect(() => {
     const loadProducts = async () => {
       const products = await fetchProducts();
@@ -20,6 +22,8 @@ const App = () => {
 
     loadProducts();
   }, []);
+
+   console.log("products",products)
 
   const handleFilterChange = (filters) => {
     let filtered = products;
